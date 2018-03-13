@@ -2,6 +2,7 @@
   "name": "code-mirror-hint",
   "description": "Hint module for code-mirror element",
   "main": "code-mirror-hint.html",
+  "version": "1.0.1",
   "authors": [
     "Pawel Psztyc <jarrodek@gmail.com>",
     "The Advanced REST Client authors"
