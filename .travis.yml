@@ -1,0 +1,5 @@
+branches:
+  only:
+  - stage
+after_success:
+- node tasks/ci.js
