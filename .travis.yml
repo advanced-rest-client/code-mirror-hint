@@ -1,7 +1,2 @@
 language: node_js
 node_js: stable
-branches:
-  only:
-  - stage
-after_success:
-- node tasks/ci.js

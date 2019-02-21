@@ -1,8 +1,12 @@
 {
-  "name": "@api-components/code-mirror-hint",
   "description": "Hint module for code-mirror element",
-  "main": "code-mirror-hint.html",
-  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:advanced-rest-client/code-mirror-hint.git"
+  },
+  "name": "@advanced-rest-client/code-mirror-hint",
+  "main": "code-mirror-hint.js",
+  "version": "3.0.0-preview.1",
   "authors": [
     "Pawel Psztyc <jarrodek@gmail.com>",
     "The Advanced REST Client authors"
@@ -11,12 +15,20 @@
     "test": "exit 0",
     "update-types": "gen-typescript-declarations --deleteExisting --outDir ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:advanced-rest-client/code-mirror-hint.git"
-  },
   "devDependencies": {
+    "@advanced-rest-client/code-mirror": "^3.0.0-preview.1",
     "@polymer/gen-typescript-declarations": "^1.6.1",
-    "bower": "^1.8.8"
+    "@polymer/iron-demo-helpers": "^3.0.0",
+    "@webcomponents/webcomponentsjs": "^2.0.0"
+  },
+  "contributors": [
+    "Pawel Psztyc <jarrodek@gmail.com>",
+    "The Advanced REST Client authors"
+  ],
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0",
+    "@polymer/paper-styles": "^3.0.0",
+    "@polymer/paper-item": "^3.0.0",
+    "@polymer/paper-listbox": "^3.0.0"
   }
 }

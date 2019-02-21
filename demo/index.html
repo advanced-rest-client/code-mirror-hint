@@ -6,14 +6,23 @@
 
     <title>code-mirror-hint demo</title>
 
-    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../../code-mirror/code-mirror.html">
-    <link rel="import" href="../code-mirror-hint.html">
-    <link rel="import" href="../headers-addon.html">
-    <link rel="import" href="../hint-http-headers.html">
+    <script src="../../../codemirror/lib/codemirror.js"></script>
+    <script src="../../../codemirror/addon/mode/loadmode.js"></script>
+    <script src="../../../codemirror/mode/meta.js"></script>
+    <script src="../headers-addon.js"></script>
+    <script src="../hint-http-headers.js"></script>
+    <script src="../show-hint.js"></script>
+
+    <script type="module">
+      import '@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
+      import '@polymer/iron-demo-helpers/demo-snippet.js';
+      import '@polymer/paper-styles/paper-styles.js';
+      import '@advanced-rest-client/code-mirror/code-mirror.js';
+      import '../code-mirror-hint.js';
+    </script>
+
     <custom-style>
       <style is="custom-style" include="demo-pages-shared-styles">
       </style>
@@ -24,15 +33,14 @@
       <h3>Basic code-mirror-hint demo</h3>
       <demo-snippet>
         <template>
-          <code-mirror id="editor"></code-mirror>
+          <code-mirror mode="http-headers" id="editor"></code-mirror>
         </template>
       </demo-snippet>
     </div>
-    <script>
+    <script type="module">
     /* global CodeMirror */
     function init() {
       const editor = document.getElementById('editor');
-      editor.mode = 'http-headers';
       editor.setOption('extraKeys', {
         'Ctrl-Space': function(cm) {
           CodeMirror.showHint(cm, CodeMirror.hint['http-headers'], {
