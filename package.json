@@ -6,7 +6,7 @@
   },
   "name": "@advanced-rest-client/code-mirror-hint",
   "main": "code-mirror-hint.js",
-  "version": "3.0.0-preview.1",
+  "version": "3.0.0-preview.2",
   "authors": [
     "Pawel Psztyc <jarrodek@gmail.com>",
     "The Advanced REST Client authors"
