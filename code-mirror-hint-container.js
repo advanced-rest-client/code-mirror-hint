@@ -1,30 +1,27 @@
-import {PolymerElement} from '../../@polymer/polymer/polymer-element.js';
-import {html} from '../../@polymer/polymer/lib/utils/html-tag.js';
-import '../../@polymer/paper-styles/shadow.js';
+import { html, css, LitElement } from 'lit-element';
 /**
  * `code-mirror-hint-container`
  * UI element for hint display.
  *
  * @customElement
- * @polymer
  * @demo demo/index.html
  */
-export class CodeMirrorHintContainer extends PolymerElement {
-  static get template() {
-    return html`
-    <style>
+export class CodeMirrorHintContainer extends LitElement {
+  static get styles() {
+    return css`
     :host {
-      @apply --shadow-elevation-4dp;
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+                  0 1px 10px 0 rgba(0, 0, 0, 0.12),
+                  0 2px 4px -1px rgba(0, 0, 0, 0.4);
     }
-    </style>
-    <div class="container">
-      <slot></slot>
-    </div>
-`;
+    `;
   }
 
-  static get is() {
-    return 'code-mirror-hint-container';
+  render() {
+    return html`
+    <div class="container">
+      <slot></slot>
+    </div>`;
   }
 }
-window.customElements.define(CodeMirrorHintContainer.is, CodeMirrorHintContainer);
+window.customElements.define('code-mirror-hint-container', CodeMirrorHintContainer);
