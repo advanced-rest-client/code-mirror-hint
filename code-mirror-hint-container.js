@@ -7,7 +7,7 @@ import { html, css, LitElement } from 'lit-element';
  * @demo demo/index.html
  */
 export class CodeMirrorHintContainer extends LitElement {
-  static get styles() {
+  get styles() {
     return css`
     :host {
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
@@ -18,7 +18,7 @@ export class CodeMirrorHintContainer extends LitElement {
   }
 
   render() {
-    return html`
+    return html`<style>${this.styles}</style>
     <div class="container">
       <slot></slot>
     </div>`;
