@@ -1,3 +1,5 @@
 import { getHints } from './HintHttpHeaders.js';
 /* global CodeMirror */
-CodeMirror.registerHelper('hint', 'http-headers', getHints);
+if (window.CodeMirror) {
+  CodeMirror.registerHelper('hint', 'http-headers', getHints);
+}
